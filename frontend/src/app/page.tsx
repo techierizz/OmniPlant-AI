@@ -165,7 +165,7 @@ export default function Home() {
       try {
         const formData = new FormData();
         formData.append('files', customFile);
-        const res = await fetch('http://localhost:8000/upload', { method: 'POST', body: formData });
+        const res = await fetch('https://omniplant-backend.onrender.com/upload', { method: 'POST', body: formData });
         if (!res.ok) throw new Error('Upload failed');
         setProcessingStep(PROCESSING_STEPS.length - 1);
         setTimeout(() => { fetchGraph(); fetchStats(); setPhase('ready'); }, 1000);
@@ -186,7 +186,7 @@ export default function Home() {
 
   const handleReset = async () => {
     try {
-      await fetch('http://localhost:8000/reset', { method: 'POST' });
+      await fetch('https://omniplant-backend.onrender.com/reset', { method: 'POST' });
       setNodes([]); setEdges([]); setKgNodes([]); setKgEdges([]); setSelectedEquipment(null);
       fetchGraph(); fetchStats();
       setPhase('upload');
@@ -197,7 +197,7 @@ export default function Home() {
 
 
   const fetchGraph = () => {
-    fetch('http://localhost:8000/graph').then(r => r.json()).then(data => {
+    fetch('https://omniplant-backend.onrender.com/graph').then(r => r.json()).then(data => {
       const rfNodes = data.nodes.map((n: any) => ({
         id: n.id, type: n.equipment_type, position: n.position,
         data: { tag: n.tag, name: n.name, status: n.status, equipmentType: n.equipment_type, alert: false } as EqData,
@@ -214,10 +214,10 @@ export default function Home() {
     }).catch(err => console.error('Graph fetch error:', err));
   };
 
-  const fetchStats = () => { fetch('http://localhost:8000/stats').then(r => r.json()).then(setStats).catch(console.error); };
+  const fetchStats = () => { fetch('https://omniplant-backend.onrender.com/stats').then(r => r.json()).then(setStats).catch(console.error); };
 
   const fetchKnowledgeGraph = () => {
-    fetch('http://localhost:8000/knowledge-graph').then(r => r.json()).then(data => {
+    fetch('https://omniplant-backend.onrender.com/knowledge-graph').then(r => r.json()).then(data => {
       const rfNodes = data.nodes.map((n: any) => ({
         id: n.id, type: n.node_type, position: n.position,
         data: { label: n.label, sublabel: n.sublabel, status: n.status, docType: n.doc_type, nodeType: n.node_type },
@@ -235,7 +235,7 @@ export default function Home() {
   // --- Node click ---
   const onNodeClick = useCallback((_: any, node: any) => {
     setActiveTab('overview');
-    fetch(`http://localhost:8000/equipment/${node.id}`).then(r => r.json()).then(setSelectedEquipment).catch(console.error);
+    fetch(`https://omniplant-backend.onrender.com/equipment/${node.id}`).then(r => r.json()).then(setSelectedEquipment).catch(console.error);
     setNodes(nds => nds.map(n => ({ ...n, className: n.id === node.id ? 'node-selected' : '' })));
   }, []);
 
@@ -247,7 +247,7 @@ export default function Home() {
     setChatMessages(prev => [...prev, { role: 'user', content: userMsg }]);
     setChatInput(''); setIsTyping(true);
     try {
-      const res = await fetch('http://localhost:8000/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: userMsg }) });
+      const res = await fetch('https://omniplant-backend.onrender.com/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: userMsg }) });
       const data = await res.json();
       await new Promise(resolve => setTimeout(resolve, 1500));
       setIsTyping(false);
@@ -271,17 +271,17 @@ export default function Home() {
     if (searchTimeoutRef.current) clearTimeout(searchTimeoutRef.current);
     if (!q.trim()) { setSearchResults([]); setShowSearchResults(false); return; }
     searchTimeoutRef.current = setTimeout(() => {
-      fetch(`http://localhost:8000/search?q=${encodeURIComponent(q)}`).then(r => r.json()).then(data => { setSearchResults(data); setShowSearchResults(true); }).catch(console.error);
+      fetch(`https://omniplant-backend.onrender.com/search?q=${encodeURIComponent(q)}`).then(r => r.json()).then(data => { setSearchResults(data); setShowSearchResults(true); }).catch(console.error);
     }, 300);
   };
 
   // --- Doc Library ---
   const openDocLibrary = () => {
-    fetch('http://localhost:8000/documents').then(r => r.json()).then(docs => { setAllDocuments(docs); setShowDocLibrary(true); }).catch(console.error);
+    fetch('https://omniplant-backend.onrender.com/documents').then(r => r.json()).then(docs => { setAllDocuments(docs); setShowDocLibrary(true); }).catch(console.error);
   };
 
   const openDocViewer = (docId: string) => {
-    fetch(`http://localhost:8000/documents/${docId}`).then(r => r.json()).then(setViewingDoc).catch(console.error);
+    fetch(`https://omniplant-backend.onrender.com/documents/${docId}`).then(r => r.json()).then(setViewingDoc).catch(console.error);
   };
 
   // --- Canvas tab switch ---
