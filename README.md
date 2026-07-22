@@ -8,7 +8,7 @@ OmniPlant AI is a next-generation industrial knowledge graph and reasoning engin
 
 Built for hackathons and rapid prototyping, OmniPlant AI features a visually stunning interface and live Gemini 2.5 Flash extraction capabilities.
 
-![OmniPlant AI Architecture](https://via.placeholder.com/800x400.png?text=OmniPlant+AI+-+Cognitive+Asset+Intelligence)
+![OmniPlant AI Architecture](./architecture.png)
 
 ## ✨ Core Features
 
