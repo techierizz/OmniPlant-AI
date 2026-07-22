@@ -1,0 +1,216 @@
+{
+  "V-105": {
+    "tag": "V-105",
+    "name": "Main Feed Valve",
+    "type": "Gate Valve",
+    "manufacturer": "Fisher Controls",
+    "model": "GX Control Valve Series 3",
+    "install_date": "2019-03-15",
+    "last_inspection": "2024-11-20",
+    "next_maintenance": "2025-03-15",
+    "status": "warning",
+    "criticality": "High",
+    "operating_temp": "85°C",
+    "operating_pressure": "12.5 bar",
+    "location": "Unit 100 - Feed Section",
+    "maintenance_history": [
+      { "date": "2024-11-20", "work_order": "WO-98422", "type": "Inspection", "description": "Actuator sticking intermittently. Lubricated and tested. Monitor closely.", "technician": "R. Sharma" },
+      { "date": "2024-06-10", "work_order": "WO-95103", "type": "Corrective", "description": "Replaced packing gland due to minor leak detected during rounds.", "technician": "A. Patel" },
+      { "date": "2023-12-01", "work_order": "WO-91200", "type": "Preventive", "description": "Annual valve overhaul. All internals inspected and within tolerance.", "technician": "K. Singh" }
+    ],
+    "compliance_standards": ["OISD-114", "API-598", "ASME B16.34"],
+    "linked_documents": ["doc_1", "doc_2", "doc_4", "doc_7"],
+    "linked_sops": ["SOP-402", "SOP-115"]
+  },
+  "V-106": {
+    "tag": "V-106",
+    "name": "Bypass Valve",
+    "type": "Globe Valve",
+    "manufacturer": "Fisher Controls",
+    "model": "GX Bypass Valve",
+    "install_date": "2019-03-15",
+    "last_inspection": "2024-10-05",
+    "next_maintenance": "2025-04-05",
+    "status": "operational",
+    "criticality": "High",
+    "operating_temp": "80°C",
+    "operating_pressure": "11.0 bar",
+    "location": "Unit 100 - Feed Section",
+    "maintenance_history": [
+      { "date": "2024-10-05", "work_order": "WO-97800", "type": "Inspection", "description": "All parameters nominal. No issues found.", "technician": "A. Patel" }
+    ],
+    "compliance_standards": ["OISD-114", "API-598"],
+    "linked_documents": ["doc_1", "doc_2"],
+    "linked_sops": ["SOP-402"]
+  },
+  "T-100": {
+    "tag": "T-100",
+    "name": "Feed Storage Tank",
+    "type": "Atmospheric Storage Tank",
+    "manufacturer": "Bharat Tanks Ltd.",
+    "model": "AT-5000",
+    "install_date": "2018-11-20",
+    "last_inspection": "2024-08-15",
+    "next_maintenance": "2025-08-15",
+    "status": "operational",
+    "criticality": "Medium",
+    "operating_temp": "Ambient",
+    "operating_pressure": "Atmospheric",
+    "location": "Unit 100 - Tank Farm",
+    "maintenance_history": [
+      { "date": "2024-08-15", "work_order": "WO-96500", "type": "Inspection", "description": "Annual tank inspection. Shell thickness within limits.", "technician": "M. Kumar" }
+    ],
+    "compliance_standards": ["OISD-117", "API-650"],
+    "linked_documents": ["doc_5"],
+    "linked_sops": ["SOP-201"]
+  },
+  "P-201": {
+    "tag": "P-201",
+    "name": "Centrifugal Feed Pump",
+    "type": "Centrifugal Pump",
+    "manufacturer": "Kirloskar Brothers",
+    "model": "KPD+ 65x40-250",
+    "install_date": "2019-06-01",
+    "last_inspection": "2024-09-12",
+    "next_maintenance": "2025-03-12",
+    "status": "operational",
+    "criticality": "High",
+    "operating_temp": "82°C",
+    "operating_pressure": "15.0 bar (discharge)",
+    "location": "Unit 100 - Pump House",
+    "maintenance_history": [
+      { "date": "2024-09-12", "work_order": "WO-97200", "type": "Preventive", "description": "Bearing replacement and alignment check. Vibration within spec.", "technician": "K. Singh" },
+      { "date": "2024-03-20", "work_order": "WO-93800", "type": "Corrective", "description": "Mechanical seal replaced after minor drip detected.", "technician": "R. Sharma" },
+      { "date": "2023-09-15", "work_order": "WO-89900", "type": "Preventive", "description": "Semi-annual PM. All readings normal.", "technician": "A. Patel" }
+    ],
+    "compliance_standards": ["API-610", "OISD-116"],
+    "linked_documents": ["doc_3", "doc_6"],
+    "linked_sops": ["SOP-305", "SOP-402"]
+  },
+  "PSV-202": {
+    "tag": "PSV-202",
+    "name": "Pressure Safety Valve",
+    "type": "Spring-Loaded Safety Valve",
+    "manufacturer": "Dresser",
+    "model": "Consolidated 1900 Series",
+    "install_date": "2019-06-01",
+    "last_inspection": "2024-12-01",
+    "next_maintenance": "2025-12-01",
+    "status": "operational",
+    "criticality": "Critical",
+    "operating_temp": "85°C",
+    "operating_pressure": "Set @ 18.0 bar",
+    "location": "Unit 100 - Pump Discharge",
+    "maintenance_history": [
+      { "date": "2024-12-01", "work_order": "WO-99100", "type": "Test", "description": "Annual pop test. Set pressure verified at 18.0 bar. Within tolerance.", "technician": "M. Kumar" }
+    ],
+    "compliance_standards": ["OISD-114", "API-520", "ASME VIII"],
+    "linked_documents": ["doc_1", "doc_8"],
+    "linked_sops": ["SOP-501"]
+  },
+  "HX-301": {
+    "tag": "HX-301",
+    "name": "Shell & Tube Exchanger",
+    "type": "Shell & Tube Heat Exchanger",
+    "manufacturer": "Alfa Laval",
+    "model": "Aalborg OC-250",
+    "install_date": "2019-04-10",
+    "last_inspection": "2024-07-22",
+    "next_maintenance": "2025-07-22",
+    "status": "operational",
+    "criticality": "High",
+    "operating_temp": "85°C → 140°C",
+    "operating_pressure": "14.0 bar",
+    "location": "Unit 100 - Process Area",
+    "maintenance_history": [
+      { "date": "2024-07-22", "work_order": "WO-96000", "type": "Inspection", "description": "Tube bundle pulled and inspected. No fouling or corrosion.", "technician": "K. Singh" }
+    ],
+    "compliance_standards": ["TEMA", "ASME VIII", "API-660"],
+    "linked_documents": ["doc_9"],
+    "linked_sops": ["SOP-310"]
+  },
+  "TI-301": {
+    "tag": "TI-301",
+    "name": "Temperature Indicator",
+    "type": "RTD Temperature Sensor",
+    "manufacturer": "Emerson",
+    "model": "Rosemount 3144P",
+    "install_date": "2019-04-10",
+    "last_inspection": "2024-11-01",
+    "next_maintenance": "2025-05-01",
+    "status": "operational",
+    "criticality": "Medium",
+    "operating_temp": "0-250°C range",
+    "operating_pressure": "N/A",
+    "location": "Unit 100 - HX Outlet",
+    "maintenance_history": [
+      { "date": "2024-11-01", "work_order": "WO-98100", "type": "Calibration", "description": "Semi-annual calibration. Within ±0.1°C accuracy.", "technician": "A. Patel" }
+    ],
+    "compliance_standards": ["IEC-61508", "ISA-S67.04"],
+    "linked_documents": ["doc_10"],
+    "linked_sops": ["SOP-310"]
+  },
+  "R-401": {
+    "tag": "R-401",
+    "name": "Reactor Vessel",
+    "type": "CSTR Reactor",
+    "manufacturer": "Godrej Process Equipment",
+    "model": "GPE-CSTR-3000",
+    "install_date": "2018-12-15",
+    "last_inspection": "2024-06-30",
+    "next_maintenance": "2025-06-30",
+    "status": "operational",
+    "criticality": "Critical",
+    "operating_temp": "180°C",
+    "operating_pressure": "12.0 bar",
+    "location": "Unit 100 - Reactor Bay",
+    "maintenance_history": [
+      { "date": "2024-06-30", "work_order": "WO-95800", "type": "Inspection", "description": "Internal inspection. Agitator shaft and baffles in good condition.", "technician": "M. Kumar" }
+    ],
+    "compliance_standards": ["ASME VIII Div.1", "PESO", "Factory Act 1948"],
+    "linked_documents": ["doc_11"],
+    "linked_sops": ["SOP-401", "SOP-402"]
+  },
+  "PI-401": {
+    "tag": "PI-401",
+    "name": "Pressure Indicator",
+    "type": "Digital Pressure Transmitter",
+    "manufacturer": "Emerson",
+    "model": "Rosemount 3051S",
+    "install_date": "2019-01-10",
+    "last_inspection": "2024-11-01",
+    "next_maintenance": "2025-05-01",
+    "status": "operational",
+    "criticality": "Medium",
+    "operating_temp": "N/A",
+    "operating_pressure": "0-25 bar range",
+    "location": "Unit 100 - Reactor Outlet",
+    "maintenance_history": [
+      { "date": "2024-11-01", "work_order": "WO-98105", "type": "Calibration", "description": "Semi-annual calibration. Accuracy within ±0.04%.", "technician": "A. Patel" }
+    ],
+    "compliance_standards": ["IEC-61508", "ISA-S67.04"],
+    "linked_documents": ["doc_10"],
+    "linked_sops": ["SOP-401"]
+  },
+  "T-501": {
+    "tag": "T-501",
+    "name": "Product Storage Tank",
+    "type": "Pressurized Storage Tank",
+    "manufacturer": "Bharat Tanks Ltd.",
+    "model": "PT-3000",
+    "install_date": "2018-11-20",
+    "last_inspection": "2024-08-15",
+    "next_maintenance": "2025-08-15",
+    "status": "operational",
+    "criticality": "Medium",
+    "operating_temp": "60°C",
+    "operating_pressure": "3.0 bar",
+    "location": "Unit 100 - Product Tank Farm",
+    "maintenance_history": [
+      { "date": "2024-08-15", "work_order": "WO-96510", "type": "Inspection", "description": "Annual inspection. All nozzle welds inspected via NDE.", "technician": "M. Kumar" }
+    ],
+    "compliance_standards": ["OISD-117", "API-650", "PESO"],
+    "linked_documents": ["doc_5", "doc_12"],
+    "linked_sops": ["SOP-201"]
+  }
+}

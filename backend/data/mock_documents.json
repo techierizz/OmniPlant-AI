@@ -1,0 +1,98 @@
+[
+  {
+    "id": "doc_1",
+    "title": "OISD Safety Standard 114 — Pressure Relief",
+    "type": "Regulation",
+    "category": "Safety",
+    "content": "OISD-STD-114: Hazardous area classification and pressure relief systems. Section 6.3: All centrifugal pump discharge lines operating above 10 bar MUST be fitted with an independent pressure safety valve. If the main inlet valve fails closed, causing dead-head conditions, the PSV must relieve within 30 seconds. Failure to maintain the PSV or bypass path constitutes a Class-A compliance violation subject to immediate shutdown order.",
+    "equipment_tags": ["V-105", "P-201", "PSV-202", "V-106"]
+  },
+  {
+    "id": "doc_2",
+    "title": "SOP-402: Emergency Pump Starvation Procedure",
+    "type": "SOP",
+    "category": "Operations",
+    "content": "Standard Operating Procedure #402 — Emergency Response for Pump Starvation Events.\n\nScope: Applies to all centrifugal pumps in Unit 100.\n\nStep 1: If main feed valve V-105 fails closed or is inadvertently shut, IMMEDIATELY open bypass valve V-106 to maintain minimum flow to Pump P-201.\nStep 2: Monitor pump discharge pressure. If pressure drops below 8.0 bar, initiate controlled shutdown of P-201.\nStep 3: Notify Shift Supervisor and issue emergency maintenance ticket for V-105.\nStep 4: Do NOT restart P-201 until flow path is confirmed via V-105 or V-106.\n\nCritical Note: Cavitation onset for P-201 occurs within 3 minutes of total flow loss. Mechanical seal failure follows within 8 minutes.",
+    "equipment_tags": ["V-105", "V-106", "P-201"]
+  },
+  {
+    "id": "doc_3",
+    "title": "OEM Manual — Kirloskar KPD+ Centrifugal Pump",
+    "type": "Manual",
+    "category": "Engineering",
+    "content": "Kirloskar KPD+ 65x40-250 Centrifugal Pump — Operation & Maintenance Manual.\n\nSection 7.2 Cavitation Warning: Cavitation begins when NPSH available drops below 3.2m. At zero flow (dead-head), cavitation onset is immediate. Impeller damage occurs within 3 minutes. Mechanical seal failure follows within 8 minutes.\n\nSection 9.1 Bearing Maintenance: Replace bearings every 8000 operating hours or upon vibration exceeding 4.5 mm/s RMS.\n\nSection 11.3 Troubleshooting: If pump exhibits unusual noise or vibration, check suction strainer for blockage, verify inlet valve is fully open, and confirm adequate NPSH.",
+    "equipment_tags": ["P-201"]
+  },
+  {
+    "id": "doc_4",
+    "title": "Work Order WO-98422 — V-105 Actuator Issue",
+    "type": "Work Order",
+    "category": "Maintenance",
+    "content": "Work Order #WO-98422\nDate: 2024-11-20\nEquipment: V-105 (Main Feed Valve)\nPriority: High\nTechnician: R. Sharma\n\nProblem: Valve actuator sticking intermittently during routine cycling test. Valve failed to fully open on 2 out of 5 test cycles.\n\nAction Taken: Actuator lubricated and linkage adjusted. Successfully cycled 10 times post-repair.\n\nRecommendation: MONITOR CLOSELY. If sticking recurs within 30 days, schedule full actuator replacement. Consider upgrading to electric actuator per MOC-2024-112.\n\nStatus: Closed — Monitoring",
+    "equipment_tags": ["V-105"]
+  },
+  {
+    "id": "doc_5",
+    "title": "OISD Standard 117 — Storage Tank Safety",
+    "type": "Regulation",
+    "category": "Safety",
+    "content": "OISD-STD-117: Fire protection and safety for storage tanks. Section 4.2: All atmospheric storage tanks exceeding 500 kL capacity must have bund walls capable of containing 110% of the largest tank volume. Annual shell thickness measurements are mandatory.",
+    "equipment_tags": ["T-100", "T-501"]
+  },
+  {
+    "id": "doc_6",
+    "title": "Work Order WO-93800 — P-201 Seal Replacement",
+    "type": "Work Order",
+    "category": "Maintenance",
+    "content": "Work Order #WO-93800\nDate: 2024-03-20\nEquipment: P-201 (Centrifugal Feed Pump)\nPriority: High\nTechnician: R. Sharma\n\nProblem: Minor drip detected at mechanical seal during routine inspection. Seal was original (5 years in service).\n\nAction Taken: Replaced mechanical seal assembly (John Crane Type 2100). Pump realigned using laser alignment tool. Post-repair vibration: 2.1 mm/s (within spec).\n\nRoot Cause: Normal wear after 5 years of continuous service.\n\nStatus: Closed",
+    "equipment_tags": ["P-201"]
+  },
+  {
+    "id": "doc_7",
+    "title": "SOP-115: Valve Isolation & LOTO Procedure",
+    "type": "SOP",
+    "category": "Safety",
+    "content": "Standard Operating Procedure #115 — Valve Isolation and Lock-Out/Tag-Out.\n\nScope: All manual and automated valves in Units 100-500.\n\nBefore isolating any valve for maintenance:\n1. Obtain Permit to Work from Control Room.\n2. Confirm zero-energy state downstream.\n3. Apply LOTO lock and personal danger tag.\n4. Verify isolation using local pressure gauge.\n\nCritical: Double-block-and-bleed configuration required for any valve rated above 10 bar.",
+    "equipment_tags": ["V-105", "V-106"]
+  },
+  {
+    "id": "doc_8",
+    "title": "PSV Test Certificate — PSV-202",
+    "type": "Certificate",
+    "category": "Compliance",
+    "content": "Pressure Safety Valve Test Certificate\nTag: PSV-202\nTest Date: 2024-12-01\nSet Pressure: 18.0 bar\nMeasured Pop Pressure: 18.1 bar\nReseat Pressure: 16.2 bar\nResult: PASS — Within ±3% tolerance per API 576.\nNext Test Due: 2025-12-01\nCertified By: M. Kumar (Authorized Inspector)",
+    "equipment_tags": ["PSV-202"]
+  },
+  {
+    "id": "doc_9",
+    "title": "OEM Manual — Alfa Laval Heat Exchanger",
+    "type": "Manual",
+    "category": "Engineering",
+    "content": "Alfa Laval Aalborg OC-250 Shell & Tube Heat Exchanger — Technical Manual.\n\nSection 3.1: Maximum design temperature 200°C, maximum design pressure 20 bar.\nSection 5.2: Clean tube-side every 12 months or when ΔT across exchanger drops below design by more than 15%.\nSection 6.1 Emergency: If cooling flow is lost, outlet temperature will rise at approximately 8°C per minute. Initiate controlled shutdown if outlet exceeds 160°C.",
+    "equipment_tags": ["HX-301"]
+  },
+  {
+    "id": "doc_10",
+    "title": "Instrument Calibration Report — Q4 2024",
+    "type": "Report",
+    "category": "Quality",
+    "content": "Quarterly Instrument Calibration Report — Q4 2024\nUnit: 100\n\nTI-301 (Temperature Indicator): Calibrated 2024-11-01. Accuracy ±0.1°C. PASS.\nPI-401 (Pressure Indicator): Calibrated 2024-11-01. Accuracy ±0.04%. PASS.\n\nAll instruments within ISA S67.04 tolerances. No adjustments required. Next calibration due Q2 2025.",
+    "equipment_tags": ["TI-301", "PI-401"]
+  },
+  {
+    "id": "doc_11",
+    "title": "PESO Registration — Reactor R-401",
+    "type": "Regulation",
+    "category": "Compliance",
+    "content": "Petroleum and Explosives Safety Organisation (PESO) Registration Certificate\nEquipment: R-401 (CSTR Reactor Vessel)\nRegistration No: MH/PESO/PV/2019/4521\nDesign Pressure: 16.0 bar\nDesign Temperature: 220°C\nHydrotest Pressure: 24.0 bar (tested 2019-01-15)\nValidity: Valid until 2029-01-15 (subject to annual inspection)\n\nFactory Act 1948 compliance confirmed.",
+    "equipment_tags": ["R-401"]
+  },
+  {
+    "id": "doc_12",
+    "title": "Incident Report IR-2023-047",
+    "type": "Incident Report",
+    "category": "Safety",
+    "content": "Incident Report IR-2023-047\nDate: 2023-07-14\nLocation: Unit 100 - Product Tank Farm\nSeverity: Near Miss\n\nDescription: During night shift, level transmitter on T-501 gave erroneous high reading due to condensation in impulse line. Operator nearly shut product inlet valve, which would have caused reactor pressure excursion.\n\nRoot Cause: Inadequate heat tracing on impulse line during monsoon season.\n\nCorrective Action: Heat tracing installed on all impulse lines. Redundant level measurement added (radar type). Operator training updated.\n\nLesson Learned: Single-point instrument failures in safety-critical services must be addressed with redundancy.",
+    "equipment_tags": ["T-501", "R-401"]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    { "id": "T-100", "equipment_type": "tank", "tag": "T-100", "name": "Feed Storage Tank", "status": "operational", "position": { "x": 50, "y": 280 } },
+    { "id": "V-105", "equipment_type": "valve", "tag": "V-105", "name": "Main Feed Valve", "status": "warning", "position": { "x": 300, "y": 280 } },
+    { "id": "V-106", "equipment_type": "valve", "tag": "V-106", "name": "Bypass Valve", "status": "operational", "position": { "x": 300, "y": 480 } },
+    { "id": "P-201", "equipment_type": "pump", "tag": "P-201", "name": "Centrifugal Feed Pump", "status": "operational", "position": { "x": 550, "y": 280 } },
+    { "id": "PSV-202", "equipment_type": "relief", "tag": "PSV-202", "name": "Pressure Safety Valve", "status": "operational", "position": { "x": 550, "y": 80 } },
+    { "id": "HX-301", "equipment_type": "heatExchanger", "tag": "HX-301", "name": "Shell & Tube Exchanger", "status": "operational", "position": { "x": 800, "y": 280 } },
+    { "id": "TI-301", "equipment_type": "sensor", "tag": "TI-301", "name": "Temperature Indicator", "status": "operational", "position": { "x": 800, "y": 80 } },
+    { "id": "R-401", "equipment_type": "reactor", "tag": "R-401", "name": "Reactor Vessel", "status": "operational", "position": { "x": 1050, "y": 280 } },
+    { "id": "PI-401", "equipment_type": "sensor", "tag": "PI-401", "name": "Pressure Indicator", "status": "operational", "position": { "x": 1050, "y": 80 } },
+    { "id": "T-501", "equipment_type": "tank", "tag": "T-501", "name": "Product Storage Tank", "status": "operational", "position": { "x": 1300, "y": 280 } }
+  ],
+  "edges": [
+    { "id": "e1", "source": "T-100", "target": "V-105", "label": "Feed Line", "line_type": "process" },
+    { "id": "e2", "source": "V-105", "target": "P-201", "label": "Main Feed", "line_type": "process" },
+    { "id": "e3", "source": "T-100", "target": "V-106", "label": "Bypass Feed", "line_type": "bypass" },
+    { "id": "e4", "source": "V-106", "target": "P-201", "label": "Bypass In", "line_type": "bypass" },
+    { "id": "e5", "source": "P-201", "target": "PSV-202", "label": "Relief Line", "line_type": "relief" },
+    { "id": "e6", "source": "P-201", "target": "HX-301", "label": "Process", "line_type": "process" },
+    { "id": "e7", "source": "HX-301", "target": "TI-301", "label": "Signal", "line_type": "signal" },
+    { "id": "e8", "source": "HX-301", "target": "R-401", "label": "Heated Feed", "line_type": "process" },
+    { "id": "e9", "source": "R-401", "target": "PI-401", "label": "Signal", "line_type": "signal" },
+    { "id": "e10", "source": "R-401", "target": "T-501", "label": "Product Out", "line_type": "process" }
+  ]
+}
